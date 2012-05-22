@@ -97,38 +97,8 @@
     }
     
     ALAsset *asset = [self.assetsList objectAtIndex:indexPath.row];
-    UIImage *image = [[UIImage alloc] initWithCGImage:asset.aspectRatioThumbnail];
+    // 이 asset을 이용해서 앨범에 있는 사진이 접근 할 수 있음
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-    [cell.contentView addSubview:imageView];
-    //NSLog(@"width = %@ , height = %@", image.size.width, image.size.height);
-    
-    
-    //NSLog(@"%@", asset.defaultRepresentation.fullScreenImage);
-    //cell.frame = self.view.bounds;
-    //cell.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-    
-    //UIImage *image = [UIImage imageWithCGImage:[asset thumbnail]];
-    /*
-    float resizeWidth = 300;
-    float resizeHeight = 300;
-    
-    UIGraphicsBeginImageContext(CGSizeMake(resizeWidth, resizeHeight));
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    CGContextTranslateCTM(context, 0.0, resizeHeight);
-    CGContextScaleCTM(context, 1.0, -1.0);
-    
-    CGContextDrawImage(context, CGRectMake(0.0, 0.0, resizeWidth, resizeHeight), [image CGImage]);
-    UIImage *scaledImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    */
-    
-    
-    //UIImage *image = [[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullResolutionImage];
-    //UIImageView *imageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    //[imageView setContentMode:UIViewContentModeScaleAspectFit];
-    //[imageView setImage:image];
-    //[cell.contentView addSubview:imageView];
     
     return cell;
 }
