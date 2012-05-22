@@ -1,0 +1,278 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		263115D51568D84C00CB70DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115D41568D84C00CB70DE /* UIKit.framework */; };
+		263115D71568D84C00CB70DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115D61568D84C00CB70DE /* Foundation.framework */; };
+		263115D91568D84C00CB70DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115D81568D84C00CB70DE /* CoreGraphics.framework */; };
+		263115DF1568D84C00CB70DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 263115DD1568D84C00CB70DE /* InfoPlist.strings */; };
+		263115E11568D84C00CB70DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E01568D84C00CB70DE /* main.m */; };
+		263115E51568D84C00CB70DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E41568D84C00CB70DE /* AppDelegate.m */; };
+		263115E81568D84C00CB70DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E71568D84C00CB70DE /* ViewController.m */; };
+		263115F21568D8C600CB70DE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115F11568D8C600CB70DE /* AssetsLibrary.framework */; };
+		26370D11156A77F5009C3248 /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26370D10156A77F5009C3248 /* ImageTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		263115D01568D84C00CB70DE /* clover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clover.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		263115D41568D84C00CB70DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		263115D61568D84C00CB70DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		263115D81568D84C00CB70DE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		263115DC1568D84C00CB70DE /* clover-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "clover-Info.plist"; sourceTree = "<group>"; };
+		263115DE1568D84C00CB70DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		263115E01568D84C00CB70DE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		263115E21568D84C00CB70DE /* clover-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clover-Prefix.pch"; sourceTree = "<group>"; };
+		263115E31568D84C00CB70DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		263115E41568D84C00CB70DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		263115E61568D84C00CB70DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		263115E71568D84C00CB70DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		263115F11568D8C600CB70DE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		26370D0F156A77F5009C3248 /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
+		26370D10156A77F5009C3248 /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		263115CD1568D84C00CB70DE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263115F21568D8C600CB70DE /* AssetsLibrary.framework in Frameworks */,
+				263115D51568D84C00CB70DE /* UIKit.framework in Frameworks */,
+				263115D71568D84C00CB70DE /* Foundation.framework in Frameworks */,
+				263115D91568D84C00CB70DE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		263115C51568D84C00CB70DE = {
+			isa = PBXGroup;
+			children = (
+				263115F11568D8C600CB70DE /* AssetsLibrary.framework */,
+				263115DA1568D84C00CB70DE /* clover */,
+				263115D31568D84C00CB70DE /* Frameworks */,
+				263115D11568D84C00CB70DE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		263115D11568D84C00CB70DE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				263115D01568D84C00CB70DE /* clover.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		263115D31568D84C00CB70DE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				263115D41568D84C00CB70DE /* UIKit.framework */,
+				263115D61568D84C00CB70DE /* Foundation.framework */,
+				263115D81568D84C00CB70DE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		263115DA1568D84C00CB70DE /* clover */ = {
+			isa = PBXGroup;
+			children = (
+				263115E31568D84C00CB70DE /* AppDelegate.h */,
+				263115E41568D84C00CB70DE /* AppDelegate.m */,
+				263115E61568D84C00CB70DE /* ViewController.h */,
+				263115E71568D84C00CB70DE /* ViewController.m */,
+				263115DB1568D84C00CB70DE /* Supporting Files */,
+				26370D0F156A77F5009C3248 /* ImageTableViewCell.h */,
+				26370D10156A77F5009C3248 /* ImageTableViewCell.m */,
+			);
+			path = clover;
+			sourceTree = "<group>";
+		};
+		263115DB1568D84C00CB70DE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				263115DC1568D84C00CB70DE /* clover-Info.plist */,
+				263115DD1568D84C00CB70DE /* InfoPlist.strings */,
+				263115E01568D84C00CB70DE /* main.m */,
+				263115E21568D84C00CB70DE /* clover-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		263115CF1568D84C00CB70DE /* clover */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 263115EE1568D84C00CB70DE /* Build configuration list for PBXNativeTarget "clover" */;
+			buildPhases = (
+				263115CC1568D84C00CB70DE /* Sources */,
+				263115CD1568D84C00CB70DE /* Frameworks */,
+				263115CE1568D84C00CB70DE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = clover;
+			productName = clover;
+			productReference = 263115D01568D84C00CB70DE /* clover.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		263115C71568D84C00CB70DE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 263115CA1568D84C00CB70DE /* Build configuration list for PBXProject "clover" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 263115C51568D84C00CB70DE;
+			productRefGroup = 263115D11568D84C00CB70DE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				263115CF1568D84C00CB70DE /* clover */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		263115CE1568D84C00CB70DE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263115DF1568D84C00CB70DE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		263115CC1568D84C00CB70DE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				263115E11568D84C00CB70DE /* main.m in Sources */,
+				263115E51568D84C00CB70DE /* AppDelegate.m in Sources */,
+				263115E81568D84C00CB70DE /* ViewController.m in Sources */,
+				26370D11156A77F5009C3248 /* ImageTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		263115DD1568D84C00CB70DE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				263115DE1568D84C00CB70DE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		263115EC1568D84C00CB70DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		263115ED1568D84C00CB70DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		263115EF1568D84C00CB70DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clover/clover-Prefix.pch";
+				INFOPLIST_FILE = "clover/clover-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		263115F01568D84C00CB70DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "clover/clover-Prefix.pch";
+				INFOPLIST_FILE = "clover/clover-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		263115CA1568D84C00CB70DE /* Build configuration list for PBXProject "clover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263115EC1568D84C00CB70DE /* Debug */,
+				263115ED1568D84C00CB70DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		263115EE1568D84C00CB70DE /* Build configuration list for PBXNativeTarget "clover" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				263115EF1568D84C00CB70DE /* Debug */,
+				263115F01568D84C00CB70DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 263115C71568D84C00CB70DE /* Project object */;
+}
