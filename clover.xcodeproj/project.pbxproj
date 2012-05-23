@@ -15,7 +15,6 @@
 		263115E51568D84C00CB70DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E41568D84C00CB70DE /* AppDelegate.m */; };
 		263115E81568D84C00CB70DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E71568D84C00CB70DE /* ViewController.m */; };
 		263115F21568D8C600CB70DE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115F11568D8C600CB70DE /* AssetsLibrary.framework */; };
-		26370D11156A77F5009C3248 /* ImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26370D10156A77F5009C3248 /* ImageTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,8 +31,6 @@
 		263115E61568D84C00CB70DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		263115E71568D84C00CB70DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		263115F11568D8C600CB70DE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		26370D0F156A77F5009C3248 /* ImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTableViewCell.h; sourceTree = "<group>"; };
-		26370D10156A77F5009C3248 /* ImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,8 +84,6 @@
 				263115E61568D84C00CB70DE /* ViewController.h */,
 				263115E71568D84C00CB70DE /* ViewController.m */,
 				263115DB1568D84C00CB70DE /* Supporting Files */,
-				26370D0F156A77F5009C3248 /* ImageTableViewCell.h */,
-				26370D10156A77F5009C3248 /* ImageTableViewCell.m */,
 			);
 			path = clover;
 			sourceTree = "<group>";
@@ -168,7 +163,6 @@
 				263115E11568D84C00CB70DE /* main.m in Sources */,
 				263115E51568D84C00CB70DE /* AppDelegate.m in Sources */,
 				263115E81568D84C00CB70DE /* ViewController.m in Sources */,
-				26370D11156A77F5009C3248 /* ImageTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
