@@ -7,7 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "AQGridView.h"
 
-@interface GridViewController : UIViewController
+@interface GridViewController : UIViewController <AQGridViewDelegate, AQGridViewDataSource> 
+{
+    ALAssetsLibrary *assetsLibrary;
+    NSMutableArray *assetsList;
+    
+    AQGridView *gridview;
+}
+
+@property (nonatomic, retain) ALAssetsLibrary *assetsLibrary;
+@property (nonatomic, retain) NSMutableArray *assetsList;
+
+@property (nonatomic, retain) AQGridView *gridView;
 
 @end
