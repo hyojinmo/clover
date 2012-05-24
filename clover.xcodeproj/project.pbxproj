@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A5FE4E5156E42D3003AE26A /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE4E4156E42D3003AE26A /* RootTabBarController.m */; };
+		0A5FE4E8156E42E9003AE26A /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE4E7156E42E9003AE26A /* GridViewController.m */; };
+		0A5FE4EB156E4300003AE26A /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE4EA156E4300003AE26A /* StoryViewController.m */; };
 		263115D51568D84C00CB70DE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115D41568D84C00CB70DE /* UIKit.framework */; };
 		263115D71568D84C00CB70DE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115D61568D84C00CB70DE /* Foundation.framework */; };
 		263115D91568D84C00CB70DE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115D81568D84C00CB70DE /* CoreGraphics.framework */; };
@@ -18,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A5FE4E3156E42D3003AE26A /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootTabBarController.h; path = classes/RootTabBarController.h; sourceTree = "<group>"; };
+		0A5FE4E4156E42D3003AE26A /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootTabBarController.m; path = classes/RootTabBarController.m; sourceTree = "<group>"; };
+		0A5FE4E6156E42E9003AE26A /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewController.h; path = classes/GridViewController.h; sourceTree = "<group>"; };
+		0A5FE4E7156E42E9003AE26A /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewController.m; path = classes/GridViewController.m; sourceTree = "<group>"; };
+		0A5FE4E9156E4300003AE26A /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryViewController.h; path = classes/StoryViewController.h; sourceTree = "<group>"; };
+		0A5FE4EA156E4300003AE26A /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryViewController.m; path = classes/StoryViewController.m; sourceTree = "<group>"; };
 		263115D01568D84C00CB70DE /* clover.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = clover.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263115D41568D84C00CB70DE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		263115D61568D84C00CB70DE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -48,6 +57,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A5FE4E1156E424D003AE26A /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				0A5FE4E3156E42D3003AE26A /* RootTabBarController.h */,
+				0A5FE4E4156E42D3003AE26A /* RootTabBarController.m */,
+				0A5FE4E6156E42E9003AE26A /* GridViewController.h */,
+				0A5FE4E7156E42E9003AE26A /* GridViewController.m */,
+				0A5FE4E9156E4300003AE26A /* StoryViewController.h */,
+				0A5FE4EA156E4300003AE26A /* StoryViewController.m */,
+			);
+			name = ui;
+			sourceTree = "<group>";
+		};
 		263115C51568D84C00CB70DE = {
 			isa = PBXGroup;
 			children = (
@@ -79,6 +101,7 @@
 		263115DA1568D84C00CB70DE /* clover */ = {
 			isa = PBXGroup;
 			children = (
+				0A5FE4E1156E424D003AE26A /* ui */,
 				263115E31568D84C00CB70DE /* AppDelegate.h */,
 				263115E41568D84C00CB70DE /* AppDelegate.m */,
 				263115E61568D84C00CB70DE /* ViewController.h */,
@@ -163,6 +186,9 @@
 				263115E11568D84C00CB70DE /* main.m in Sources */,
 				263115E51568D84C00CB70DE /* AppDelegate.m in Sources */,
 				263115E81568D84C00CB70DE /* ViewController.m in Sources */,
+				0A5FE4E5156E42D3003AE26A /* RootTabBarController.m in Sources */,
+				0A5FE4E8156E42E9003AE26A /* GridViewController.m in Sources */,
+				0A5FE4EB156E4300003AE26A /* StoryViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
