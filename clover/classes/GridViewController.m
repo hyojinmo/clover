@@ -36,6 +36,7 @@
         self.gridView.autoresizesSubviews = YES;
         self.gridView.delegate = self;
         self.gridView.dataSource = self;
+        [self.gridView resizesCellWidthToFit];
         [self.view addSubview:gridView];
         [self.gridView reloadData];
     }
@@ -78,6 +79,31 @@
     [super dealloc];
 }
 
+- (UIImage *)resizeImage:(UIImage*)image newSize:(CGSize)newSize {
+    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height));
+    CGImageRef imageRef = image.CGImage;
+    
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // Set the quality level to use when rescaling
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, newSize.height);
+    
+    CGContextConcatCTM(context, flipVertical);  
+    // Draw into the context; this scales the image
+    CGContextDrawImage(context, newRect, imageRef);
+    
+    // Get the resized image from the context and a UIImage
+    CGImageRef newImageRef = CGBitmapContextCreateImage(context);
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+    
+    CGImageRelease(newImageRef);
+    UIGraphicsEndImageContext();    
+    
+    return newImage;
+}
+
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
@@ -95,20 +121,17 @@
 {
     static NSString * PlainCellIdentifier = @"PlainCellIdentifier";
     
+    ALAsset *asset = [self.assetsList objectAtIndex:index];
+    UIImage *image = [[UIImage alloc] initWithCGImage:asset.thumbnail];
+    UIImage *result = [self resizeImage:image newSize:CGSizeMake(75.0, 75.0)];
     GridViewCell * cell = (GridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"PlainCellIdentifier"];
-    
     if ( cell == nil )
     {
-        cell = [[GridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, 160, 123)
+        cell = [[GridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, 75.0, 75.0)
                                    reuseIdentifier: PlainCellIdentifier];
-        
     }
-    ALAsset *asset = [self.assetsList objectAtIndex:index];
-    UIImage *image = [[UIImage alloc] initWithCGImage:asset.aspectRatioThumbnail];
-
-    //UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:@"http://postfiles3.naver.net/20111128_130/kamiu09_1322445911366bK6ed_JPEG/%B0%AD%B9%CE%B0%E65.jpg?type=w2"]]];
-    [cell.imageView setImage:image];
-    [cell.captionLabel setText:@"A"];
+    
+    [cell.imageView setImage:result];
     
     return cell;
 
@@ -116,6 +139,6 @@
 
 - (CGSize) portraitGridCellSizeForGridView: (AQGridView *) aGridView
 {
-    return ( CGSizeMake(224.0, 168.0) );
+    return ( CGSizeMake(75.0, 75.0) );
 }
 @end
