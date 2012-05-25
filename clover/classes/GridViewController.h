@@ -14,8 +14,10 @@
 {
     ALAssetsLibrary *assetsLibrary;
     NSMutableArray *assetsList;
-    
     AQGridView *gridview;
+    
+    float positionX;
+    float positionY;
 }
 
 @property (nonatomic, retain) ALAssetsLibrary *assetsLibrary;

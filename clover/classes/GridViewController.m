@@ -18,7 +18,6 @@
 @synthesize assetsList;
 @synthesize gridView;
 
-
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -37,6 +36,7 @@
         self.gridView.autoresizesSubviews = YES;
         self.gridView.delegate = self;
         self.gridView.dataSource = self;
+        //self.gridView.resizesCellWidthToFit = YES;
         [self.gridView resizesCellWidthToFit];
         [self.view addSubview:gridView];
         [self.gridView reloadData];
@@ -124,24 +124,27 @@
     static NSString * PlainCellIdentifier = @"ImageCellIdentifier";
     
     ALAsset *asset = [self.assetsList objectAtIndex:index];
-    UIImage *image = [[UIImage alloc] initWithCGImage:asset.aspectRatioThumbnail];
-    UIImage *result = [self resizeImage:image newSize:CGSizeMake(image.size.width, image.size.height)];
+    UIImage *image = [[UIImage alloc] initWithCGImage:asset.thumbnail];
     GridViewCell * cell = (GridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier"];
     if ( cell == nil )
     {
-        cell = [[GridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, image.size.width, image.size.height)
-                                   reuseIdentifier: PlainCellIdentifier];
+        cell = [[GridViewCell alloc] initWithFrame:CGRectMake(0, 0, 75, 75) reuseIdentifier:PlainCellIdentifier];
     }
     
-    [cell.imageView setImage:result];
-    
+    [cell.imageView setImage:image];
     return cell;
-
 }
 
+/*
 - (CGRect)gridView:(AQGridView *)gridView adjustCellFrame:(CGRect)cellFrame withinGridCellFrame:(CGRect)gridCellFrame {
     
-    return CGRectMake(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.height);
+    return CGRectMake(cellFrame.origin.x, cellFrame.origin.y, 60, 60);
+}
+ */
+
+- (CGSize)portraitGridCellSizeForGridView:(AQGridView *)gridView 
+{
+    return CGSizeMake(80, 80);
 }
 
 - (void)gridView:(AQGridView *)gridView didSelectItemAtIndex:(NSUInteger)index 
