@@ -119,15 +119,15 @@
 
 - (AQGridViewCell *) gridView: (AQGridView *) aGridView cellForItemAtIndex: (NSUInteger) index
 {
-    static NSString * PlainCellIdentifier = @"PlainCellIdentifier";
+    static NSString * PlainCellIdentifier = @"ImageCellIdentifier";
     
     ALAsset *asset = [self.assetsList objectAtIndex:index];
-    UIImage *image = [[UIImage alloc] initWithCGImage:asset.thumbnail];
-    UIImage *result = [self resizeImage:image newSize:CGSizeMake(75.0, 75.0)];
-    GridViewCell * cell = (GridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"PlainCellIdentifier"];
+    UIImage *image = [[UIImage alloc] initWithCGImage:asset.aspectRatioThumbnail];
+    UIImage *result = [self resizeImage:image newSize:CGSizeMake(image.size.width, image.size.height)];
+    GridViewCell * cell = (GridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier"];
     if ( cell == nil )
     {
-        cell = [[GridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, 75.0, 75.0)
+        cell = [[GridViewCell alloc] initWithFrame: CGRectMake(0.0, 0.0, image.size.width, image.size.height)
                                    reuseIdentifier: PlainCellIdentifier];
     }
     
@@ -137,8 +137,16 @@
 
 }
 
-- (CGSize) portraitGridCellSizeForGridView: (AQGridView *) aGridView
+- (void)gridView:(AQGridView *)gridView didSelectItemAtIndex:(NSUInteger)index 
 {
-    return ( CGSizeMake(75.0, 75.0) );
+    // 이미지를 클릭하면 발생
+    ALAsset *asset = [self.assetsList objectAtIndex:index];
+    NSLog(@"%@", asset);
 }
+
+- (CGRect)gridView:(AQGridView *)gridView adjustCellFrame:(CGRect)cellFrame withinGridCellFrame:(CGRect)gridCellFrame {
+    
+    return CGRectMake(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.height);
+}
+
 @end
