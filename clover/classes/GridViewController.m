@@ -3,7 +3,7 @@
 //  clover
 //
 //  Created by Hyojin Mo on 12. 5. 24..
-//  Copyright (c) 2012년 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012년 Rooftop. All rights reserved.
 //
 
 #import "GridViewController.h"
@@ -23,14 +23,15 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+        
         [self setTitle:@"Grid View"];
         [self setTabBarItem:[[UITabBarItem alloc] initWithTitle:@"Grid View" image:nil tag:0]];
         
         ALAssetsLibrary *newLibray = [[ALAssetsLibrary alloc] init];
-        assetsLibrary = [newLibray retain];
+        self.assetsLibrary = [newLibray retain];
         [newLibray release];
-        assetsList = [[NSMutableArray alloc] initWithCapacity:0];
         
+        self.assetsList = [[NSMutableArray alloc] initWithCapacity:0];
         self.gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
         self.gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
         self.gridView.autoresizesSubviews = YES;
@@ -74,6 +75,7 @@
 
 - (void)dealloc 
 {
+    [gridview release];
     [assetsLibrary release];
     [assetsList release];
     [super dealloc];
@@ -137,16 +139,16 @@
 
 }
 
+- (CGRect)gridView:(AQGridView *)gridView adjustCellFrame:(CGRect)cellFrame withinGridCellFrame:(CGRect)gridCellFrame {
+    
+    return CGRectMake(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.height);
+}
+
 - (void)gridView:(AQGridView *)gridView didSelectItemAtIndex:(NSUInteger)index 
 {
     // 이미지를 클릭하면 발생
     ALAsset *asset = [self.assetsList objectAtIndex:index];
     NSLog(@"%@", asset);
-}
-
-- (CGRect)gridView:(AQGridView *)gridView adjustCellFrame:(CGRect)cellFrame withinGridCellFrame:(CGRect)gridCellFrame {
-    
-    return CGRectMake(cellFrame.origin.x, cellFrame.origin.y, cellFrame.size.width, cellFrame.size.height);
 }
 
 @end
