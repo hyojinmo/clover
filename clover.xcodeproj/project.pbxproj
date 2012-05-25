@@ -18,7 +18,6 @@
 		263115DF1568D84C00CB70DE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 263115DD1568D84C00CB70DE /* InfoPlist.strings */; };
 		263115E11568D84C00CB70DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E01568D84C00CB70DE /* main.m */; };
 		263115E51568D84C00CB70DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E41568D84C00CB70DE /* AppDelegate.m */; };
-		263115E81568D84C00CB70DE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E71568D84C00CB70DE /* ViewController.m */; };
 		263115F21568D8C600CB70DE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115F11568D8C600CB70DE /* AssetsLibrary.framework */; };
 		26559F30156E764E00B451A9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26559F2F156E764E00B451A9 /* QuartzCore.framework */; };
 		26559F3B156E785900B451A9 /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F3A156E785900B451A9 /* GridViewCell.m */; };
@@ -54,8 +53,6 @@
 		263115E21568D84C00CB70DE /* clover-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "clover-Prefix.pch"; sourceTree = "<group>"; };
 		263115E31568D84C00CB70DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		263115E41568D84C00CB70DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		263115E61568D84C00CB70DE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		263115E71568D84C00CB70DE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		263115F11568D8C600CB70DE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		26559F2F156E764E00B451A9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		26559F39156E785900B451A9 /* GridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewCell.h; path = ../../../../../Users/dongkang/Downloads/BizAppTutorial/GridViewCell.h; sourceTree = "<group>"; };
@@ -164,8 +161,6 @@
 				0A5FE4E1156E424D003AE26A /* ui */,
 				263115E31568D84C00CB70DE /* AppDelegate.h */,
 				263115E41568D84C00CB70DE /* AppDelegate.m */,
-				263115E61568D84C00CB70DE /* ViewController.h */,
-				263115E71568D84C00CB70DE /* ViewController.m */,
 				263115DB1568D84C00CB70DE /* Supporting Files */,
 			);
 			path = clover;
@@ -275,7 +270,6 @@
 			files = (
 				263115E11568D84C00CB70DE /* main.m in Sources */,
 				263115E51568D84C00CB70DE /* AppDelegate.m in Sources */,
-				263115E81568D84C00CB70DE /* ViewController.m in Sources */,
 				0A5FE4E5156E42D3003AE26A /* RootTabBarController.m in Sources */,
 				0A5FE4E8156E42E9003AE26A /* GridViewController.m in Sources */,
 				0A5FE4EB156E4300003AE26A /* StoryViewController.m in Sources */,

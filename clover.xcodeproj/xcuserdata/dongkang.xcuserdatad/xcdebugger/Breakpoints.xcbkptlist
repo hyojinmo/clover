@@ -47,11 +47,13 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "clover/classes/GridViewController.m"
-         timestampString = "359636864.450484"
+         timestampString = "359641422.883307"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "134"
-         endingLineNumber = "134">
+         startingLineNumber = "137"
+         endingLineNumber = "137"
+         landmarkName = "-gridView:cellForItemAtIndex:"
+         landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
 </Bucket>
