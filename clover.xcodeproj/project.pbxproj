@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A298E99156F521B00F0D267 /* ImagePropertiesLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A298E98156F521B00F0D267 /* ImagePropertiesLib.m */; };
+		0A298E9B156F52C600F0D267 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A298E9A156F52C600F0D267 /* ImageIO.framework */; };
 		0A5FE4E5156E42D3003AE26A /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE4E4156E42D3003AE26A /* RootTabBarController.m */; };
 		0A5FE4E8156E42E9003AE26A /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE4E7156E42E9003AE26A /* GridViewController.m */; };
 		0A5FE4EB156E4300003AE26A /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A5FE4EA156E4300003AE26A /* StoryViewController.m */; };
@@ -33,6 +35,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0A298E97156F521B00F0D267 /* ImagePropertiesLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImagePropertiesLib.h; sourceTree = "<group>"; };
+		0A298E98156F521B00F0D267 /* ImagePropertiesLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImagePropertiesLib.m; sourceTree = "<group>"; };
+		0A298E9A156F52C600F0D267 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
 		0A5FE4E3156E42D3003AE26A /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootTabBarController.h; path = classes/RootTabBarController.h; sourceTree = "<group>"; };
 		0A5FE4E4156E42D3003AE26A /* RootTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootTabBarController.m; path = classes/RootTabBarController.m; sourceTree = "<group>"; };
 		0A5FE4E6156E42E9003AE26A /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewController.h; path = classes/GridViewController.h; sourceTree = "<group>"; };
@@ -85,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A298E9B156F52C600F0D267 /* ImageIO.framework in Frameworks */,
 				26559F30156E764E00B451A9 /* QuartzCore.framework in Frameworks */,
 				263115F21568D8C600CB70DE /* AssetsLibrary.framework in Frameworks */,
 				263115D51568D84C00CB70DE /* UIKit.framework in Frameworks */,
@@ -96,6 +102,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0A298E96156F51F900F0D267 /* ImagePropertiesLib */ = {
+			isa = PBXGroup;
+			children = (
+				0A298E97156F521B00F0D267 /* ImagePropertiesLib.h */,
+				0A298E98156F521B00F0D267 /* ImagePropertiesLib.m */,
+			);
+			name = ImagePropertiesLib;
+			sourceTree = "<group>";
+		};
 		0A5FE4E1156E424D003AE26A /* ui */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,7 +129,7 @@
 		263115C51568D84C00CB70DE = {
 			isa = PBXGroup;
 			children = (
-				26559F2F156E764E00B451A9 /* QuartzCore.framework */,
+				0A298E96156F51F900F0D267 /* ImagePropertiesLib */,
 				26559F0C156E760700B451A9 /* AQGridView */,
 				263115DA1568D84C00CB70DE /* clover */,
 				263115D31568D84C00CB70DE /* Frameworks */,
@@ -133,6 +148,8 @@
 		263115D31568D84C00CB70DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0A298E9A156F52C600F0D267 /* ImageIO.framework */,
+				26559F2F156E764E00B451A9 /* QuartzCore.framework */,
 				263115F11568D8C600CB70DE /* AssetsLibrary.framework */,
 				263115D41568D84C00CB70DE /* UIKit.framework */,
 				263115D61568D84C00CB70DE /* Foundation.framework */,
@@ -273,6 +290,7 @@
 				26559F5A156E805200B451A9 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */,
 				26559F5B156E805200B451A9 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
 				26559F5C156E805200B451A9 /* UIColor+AQGridView.m in Sources */,
+				0A298E99156F521B00F0D267 /* ImagePropertiesLib.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
