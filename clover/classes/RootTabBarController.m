@@ -8,6 +8,7 @@
 
 #import "RootTabBarController.h"
 
+#import "DTTestGridViewController.h"
 #import "GridViewController.h"
 #import "StoryViewController.h"
 
@@ -15,6 +16,7 @@
 
 @end
 
+//DTTestGridViewController *_testViewController;
 GridViewController *_gridViewController;
 StoryViewController *_storyViewController;
 
@@ -35,6 +37,7 @@ StoryViewController *_storyViewController;
 	// Do any additional setup after loading the view.
     
     _gridViewController = [[GridViewController alloc] init];
+    //_testViewController = [[DTTestGridViewController alloc] init];
     _storyViewController = [[StoryViewController alloc] init];
     
     NSArray *viewControllers = [[NSArray alloc] initWithObjects:_gridViewController, _storyViewController, nil];

@@ -7,7 +7,7 @@
 //
 
 #import "GridViewController.h"
-#import "GridViewCell.h"
+#import "ImageGridViewCell.h"
 
 @interface GridViewController ()
 
@@ -123,15 +123,17 @@
 {
     static NSString * PlainCellIdentifier = @"ImageCellIdentifier";
     
+    
     ALAsset *asset = [self.assetsList objectAtIndex:index];
     UIImage *image = [[UIImage alloc] initWithCGImage:asset.thumbnail];
-    GridViewCell * cell = (GridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier"];
+    ImageGridViewCell * cell = (ImageGridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier"];
     if ( cell == nil )
     {
-        cell = [[GridViewCell alloc] initWithFrame:CGRectMake(0, 0, 75, 75) reuseIdentifier:PlainCellIdentifier];
+        cell = [[ImageGridViewCell alloc] initWithFrame:CGRectMake(0, 0, 75, 75) reuseIdentifier:PlainCellIdentifier];
     }
     
     [cell.imageView setImage:image];
+    
     return cell;
 }
 

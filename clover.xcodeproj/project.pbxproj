@@ -20,7 +20,6 @@
 		263115E51568D84C00CB70DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E41568D84C00CB70DE /* AppDelegate.m */; };
 		263115F21568D8C600CB70DE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115F11568D8C600CB70DE /* AssetsLibrary.framework */; };
 		26559F30156E764E00B451A9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26559F2F156E764E00B451A9 /* QuartzCore.framework */; };
-		26559F3B156E785900B451A9 /* GridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F3A156E785900B451A9 /* GridViewCell.m */; };
 		26559F53156E805200B451A9 /* AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F3D156E805200B451A9 /* AQGridView.m */; };
 		26559F54156E805200B451A9 /* AQGridViewAnimatorItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F41156E805200B451A9 /* AQGridViewAnimatorItem.m */; };
 		26559F55156E805200B451A9 /* AQGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F43156E805200B451A9 /* AQGridViewCell.m */; };
@@ -31,6 +30,16 @@
 		26559F5A156E805200B451A9 /* NSIndexSet+AQIndexesOutsideSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F4E156E805200B451A9 /* NSIndexSet+AQIndexesOutsideSet.m */; };
 		26559F5B156E805200B451A9 /* NSIndexSet+AQIsSetContiguous.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F50156E805200B451A9 /* NSIndexSet+AQIsSetContiguous.m */; };
 		26559F5C156E805200B451A9 /* UIColor+AQGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26559F52156E805200B451A9 /* UIColor+AQGridView.m */; };
+		26CFED671573AEF2008989E6 /* DTGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED5F1573AEF2008989E6 /* DTGridView.m */; };
+		26CFED681573AEF2008989E6 /* DTGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED611573AEF2008989E6 /* DTGridViewCell.m */; };
+		26CFED691573AEF2008989E6 /* DTGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED641573AEF2008989E6 /* DTGridViewController.m */; };
+		26CFED6F1573AF2B008989E6 /* DTInfiniteGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED6E1573AF2B008989E6 /* DTInfiniteGridView.m */; };
+		26CFED771573AF40008989E6 /* DTLabelsSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED721573AF40008989E6 /* DTLabelsSnapGridViewCell.m */; };
+		26CFED781573AF40008989E6 /* DTSnapGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED741573AF40008989E6 /* DTSnapGridView.m */; };
+		26CFED791573AF40008989E6 /* DTSnapGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED761573AF40008989E6 /* DTSnapGridViewCell.m */; };
+		26CFED7C1573AF5B008989E6 /* DTTestGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED7B1573AF5B008989E6 /* DTTestGridViewController.m */; };
+		26CFED7F1573C384008989E6 /* ImageGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED7E1573C384008989E6 /* ImageGridViewCell.m */; };
+		26CFED821573C8C1008989E6 /* DTTestGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 26CFED811573C8C1008989E6 /* DTTestGridViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,8 +64,6 @@
 		263115E41568D84C00CB70DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		263115F11568D8C600CB70DE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		26559F2F156E764E00B451A9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		26559F39156E785900B451A9 /* GridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewCell.h; path = ../../../../../Users/dongkang/Downloads/BizAppTutorial/GridViewCell.h; sourceTree = "<group>"; };
-		26559F3A156E785900B451A9 /* GridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewCell.m; path = ../../../../../Users/dongkang/Downloads/BizAppTutorial/GridViewCell.m; sourceTree = "<group>"; };
 		26559F3C156E805200B451A9 /* AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AQGridView.h; path = AQGridView/AQGridView.h; sourceTree = "<group>"; };
 		26559F3D156E805200B451A9 /* AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AQGridView.m; path = AQGridView/AQGridView.m; sourceTree = "<group>"; };
 		26559F3E156E805200B451A9 /* AQGridView+CellLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AQGridView+CellLayout.h"; path = "AQGridView/AQGridView+CellLayout.h"; sourceTree = "<group>"; };
@@ -80,6 +87,27 @@
 		26559F50156E805200B451A9 /* NSIndexSet+AQIsSetContiguous.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSIndexSet+AQIsSetContiguous.m"; path = "AQGridView/NSIndexSet+AQIsSetContiguous.m"; sourceTree = "<group>"; };
 		26559F51156E805200B451A9 /* UIColor+AQGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIColor+AQGridView.h"; path = "AQGridView/UIColor+AQGridView.h"; sourceTree = "<group>"; };
 		26559F52156E805200B451A9 /* UIColor+AQGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIColor+AQGridView.m"; path = "AQGridView/UIColor+AQGridView.m"; sourceTree = "<group>"; };
+		26CFED5E1573AEF2008989E6 /* DTGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGridView.h; path = DTGridView/DTGridView.h; sourceTree = "<group>"; };
+		26CFED5F1573AEF2008989E6 /* DTGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGridView.m; path = DTGridView/DTGridView.m; sourceTree = "<group>"; };
+		26CFED601573AEF2008989E6 /* DTGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGridViewCell.h; path = DTGridView/DTGridViewCell.h; sourceTree = "<group>"; };
+		26CFED611573AEF2008989E6 /* DTGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGridViewCell.m; path = DTGridView/DTGridViewCell.m; sourceTree = "<group>"; };
+		26CFED621573AEF2008989E6 /* DTGridViewCellInfoProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGridViewCellInfoProtocol.h; path = DTGridView/DTGridViewCellInfoProtocol.h; sourceTree = "<group>"; };
+		26CFED631573AEF2008989E6 /* DTGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTGridViewController.h; path = DTGridView/DTGridViewController.h; sourceTree = "<group>"; };
+		26CFED641573AEF2008989E6 /* DTGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTGridViewController.m; path = DTGridView/DTGridViewController.m; sourceTree = "<group>"; };
+		26CFED6D1573AF2B008989E6 /* DTInfiniteGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTInfiniteGridView.h; path = DTGridView/DTInfiniteGridView/DTInfiniteGridView.h; sourceTree = "<group>"; };
+		26CFED6E1573AF2B008989E6 /* DTInfiniteGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTInfiniteGridView.m; path = DTGridView/DTInfiniteGridView/DTInfiniteGridView.m; sourceTree = "<group>"; };
+		26CFED711573AF40008989E6 /* DTLabelsSnapGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTLabelsSnapGridViewCell.h; path = DTGridView/DTSnapGridView/DTLabelsSnapGridViewCell.h; sourceTree = "<group>"; };
+		26CFED721573AF40008989E6 /* DTLabelsSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTLabelsSnapGridViewCell.m; path = DTGridView/DTSnapGridView/DTLabelsSnapGridViewCell.m; sourceTree = "<group>"; };
+		26CFED731573AF40008989E6 /* DTSnapGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTSnapGridView.h; path = DTGridView/DTSnapGridView/DTSnapGridView.h; sourceTree = "<group>"; };
+		26CFED741573AF40008989E6 /* DTSnapGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTSnapGridView.m; path = DTGridView/DTSnapGridView/DTSnapGridView.m; sourceTree = "<group>"; };
+		26CFED751573AF40008989E6 /* DTSnapGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTSnapGridViewCell.h; path = DTGridView/DTSnapGridView/DTSnapGridViewCell.h; sourceTree = "<group>"; };
+		26CFED761573AF40008989E6 /* DTSnapGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTSnapGridViewCell.m; path = DTGridView/DTSnapGridView/DTSnapGridViewCell.m; sourceTree = "<group>"; };
+		26CFED7A1573AF5B008989E6 /* DTTestGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTestGridViewController.h; path = classes/DTTestGridViewController.h; sourceTree = "<group>"; };
+		26CFED7B1573AF5B008989E6 /* DTTestGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTestGridViewController.m; path = classes/DTTestGridViewController.m; sourceTree = "<group>"; };
+		26CFED7D1573C383008989E6 /* ImageGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageGridViewCell.h; path = classes/ImageGridViewCell.h; sourceTree = "<group>"; };
+		26CFED7E1573C384008989E6 /* ImageGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageGridViewCell.m; path = classes/ImageGridViewCell.m; sourceTree = "<group>"; };
+		26CFED801573C8C1008989E6 /* DTTestGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTestGridViewCell.h; path = classes/DTTestGridViewCell.h; sourceTree = "<group>"; };
+		26CFED811573C8C1008989E6 /* DTTestGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTestGridViewCell.m; path = classes/DTTestGridViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,14 +139,18 @@
 		0A5FE4E1156E424D003AE26A /* ui */ = {
 			isa = PBXGroup;
 			children = (
-				26559F39156E785900B451A9 /* GridViewCell.h */,
-				26559F3A156E785900B451A9 /* GridViewCell.m */,
 				0A5FE4E3156E42D3003AE26A /* RootTabBarController.h */,
 				0A5FE4E4156E42D3003AE26A /* RootTabBarController.m */,
 				0A5FE4E6156E42E9003AE26A /* GridViewController.h */,
 				0A5FE4E7156E42E9003AE26A /* GridViewController.m */,
 				0A5FE4E9156E4300003AE26A /* StoryViewController.h */,
 				0A5FE4EA156E4300003AE26A /* StoryViewController.m */,
+				26CFED7A1573AF5B008989E6 /* DTTestGridViewController.h */,
+				26CFED7B1573AF5B008989E6 /* DTTestGridViewController.m */,
+				26CFED7D1573C383008989E6 /* ImageGridViewCell.h */,
+				26CFED7E1573C384008989E6 /* ImageGridViewCell.m */,
+				26CFED801573C8C1008989E6 /* DTTestGridViewCell.h */,
+				26CFED811573C8C1008989E6 /* DTTestGridViewCell.m */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -126,6 +158,7 @@
 		263115C51568D84C00CB70DE = {
 			isa = PBXGroup;
 			children = (
+				26CFED5C1573AE4F008989E6 /* DTGridView */,
 				0A298E96156F51F900F0D267 /* ImagePropertiesLib */,
 				26559F0C156E760700B451A9 /* AQGridView */,
 				263115DA1568D84C00CB70DE /* clover */,
@@ -207,6 +240,44 @@
 			name = AQGridView;
 			sourceTree = "<group>";
 		};
+		26CFED5C1573AE4F008989E6 /* DTGridView */ = {
+			isa = PBXGroup;
+			children = (
+				26CFED701573AF2F008989E6 /* DTSnapGridView */,
+				26CFED6C1573AF10008989E6 /* DTInfiniteGridView */,
+				26CFED5E1573AEF2008989E6 /* DTGridView.h */,
+				26CFED5F1573AEF2008989E6 /* DTGridView.m */,
+				26CFED601573AEF2008989E6 /* DTGridViewCell.h */,
+				26CFED611573AEF2008989E6 /* DTGridViewCell.m */,
+				26CFED621573AEF2008989E6 /* DTGridViewCellInfoProtocol.h */,
+				26CFED631573AEF2008989E6 /* DTGridViewController.h */,
+				26CFED641573AEF2008989E6 /* DTGridViewController.m */,
+			);
+			name = DTGridView;
+			sourceTree = "<group>";
+		};
+		26CFED6C1573AF10008989E6 /* DTInfiniteGridView */ = {
+			isa = PBXGroup;
+			children = (
+				26CFED6D1573AF2B008989E6 /* DTInfiniteGridView.h */,
+				26CFED6E1573AF2B008989E6 /* DTInfiniteGridView.m */,
+			);
+			name = DTInfiniteGridView;
+			sourceTree = "<group>";
+		};
+		26CFED701573AF2F008989E6 /* DTSnapGridView */ = {
+			isa = PBXGroup;
+			children = (
+				26CFED711573AF40008989E6 /* DTLabelsSnapGridViewCell.h */,
+				26CFED721573AF40008989E6 /* DTLabelsSnapGridViewCell.m */,
+				26CFED731573AF40008989E6 /* DTSnapGridView.h */,
+				26CFED741573AF40008989E6 /* DTSnapGridView.m */,
+				26CFED751573AF40008989E6 /* DTSnapGridViewCell.h */,
+				26CFED761573AF40008989E6 /* DTSnapGridViewCell.m */,
+			);
+			name = DTSnapGridView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -273,7 +344,6 @@
 				0A5FE4E5156E42D3003AE26A /* RootTabBarController.m in Sources */,
 				0A5FE4E8156E42E9003AE26A /* GridViewController.m in Sources */,
 				0A5FE4EB156E4300003AE26A /* StoryViewController.m in Sources */,
-				26559F3B156E785900B451A9 /* GridViewCell.m in Sources */,
 				26559F53156E805200B451A9 /* AQGridView.m in Sources */,
 				26559F54156E805200B451A9 /* AQGridViewAnimatorItem.m in Sources */,
 				26559F55156E805200B451A9 /* AQGridViewCell.m in Sources */,
@@ -285,6 +355,16 @@
 				26559F5B156E805200B451A9 /* NSIndexSet+AQIsSetContiguous.m in Sources */,
 				26559F5C156E805200B451A9 /* UIColor+AQGridView.m in Sources */,
 				0A298E99156F521B00F0D267 /* ImagePropertiesLib.m in Sources */,
+				26CFED671573AEF2008989E6 /* DTGridView.m in Sources */,
+				26CFED681573AEF2008989E6 /* DTGridViewCell.m in Sources */,
+				26CFED691573AEF2008989E6 /* DTGridViewController.m in Sources */,
+				26CFED6F1573AF2B008989E6 /* DTInfiniteGridView.m in Sources */,
+				26CFED771573AF40008989E6 /* DTLabelsSnapGridViewCell.m in Sources */,
+				26CFED781573AF40008989E6 /* DTSnapGridView.m in Sources */,
+				26CFED791573AF40008989E6 /* DTSnapGridViewCell.m in Sources */,
+				26CFED7C1573AF5B008989E6 /* DTTestGridViewController.m in Sources */,
+				26CFED7F1573C384008989E6 /* ImageGridViewCell.m in Sources */,
+				26CFED821573C8C1008989E6 /* DTTestGridViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
