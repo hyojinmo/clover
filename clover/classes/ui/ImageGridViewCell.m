@@ -11,14 +11,17 @@
 @implementation ImageGridViewCell
 @synthesize imageView;
 
-- (id)initWithFrame:(CGRect)frame
+- (id) initWithFrame:(CGRect)frame reuseIdentifier:(NSString *)anIdentifier
 {
-    self = [super initWithFrame:frame];
-    if (self) {
-        
-        self.imageView = [[UIImageView alloc] initWithFrame:frame];
-        [self.contentView addSubview:self.imageView];
+    self = [super initWithFrame:frame reuseIdentifier:anIdentifier];
+    
+    if(self == nil) {
+        return (nil);
     }
+    
+    self.imageView = [[UIImageView alloc] initWithFrame:frame];
+    [self.contentView addSubview: self.imageView];
+    
     return self;
 }
 

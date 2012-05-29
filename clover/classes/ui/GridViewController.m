@@ -123,7 +123,6 @@
 {
     static NSString * PlainCellIdentifier = @"ImageCellIdentifier";
     
-    
     ALAsset *asset = [self.assetsList objectAtIndex:index];
     UIImage *image = [[UIImage alloc] initWithCGImage:asset.thumbnail];
     ImageGridViewCell * cell = (ImageGridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier"];

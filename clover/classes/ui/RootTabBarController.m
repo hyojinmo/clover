@@ -36,8 +36,8 @@ StoryViewController *_storyViewController;
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    _gridViewController = [[GridViewController alloc] init];
     //_testViewController = [[DTTestGridViewController alloc] init];
+    _gridViewController = [[GridViewController alloc] init];
     _storyViewController = [[StoryViewController alloc] init];
     
     NSArray *viewControllers = [[NSArray alloc] initWithObjects:_gridViewController, _storyViewController, nil];
