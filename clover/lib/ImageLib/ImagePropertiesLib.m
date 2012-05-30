@@ -36,9 +36,9 @@
             
             @try {
                 // get exif data
-                CFDictionaryRef exif = (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyExifDictionary);
-                CFDictionaryRef tiff = (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyTIFFDictionary);
-                CFDictionaryRef gps = (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyGPSDictionary);
+                CFDictionaryRef exif = (imagePropertiesDictionary != nil) ? (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyExifDictionary) : nil;
+                CFDictionaryRef tiff = (imagePropertiesDictionary != nil) ? (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyTIFFDictionary) : nil;
+                CFDictionaryRef gps = (imagePropertiesDictionary != nil) ? (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyGPSDictionary) : nil;
                 
                 NSDictionary *exif_dict = (__bridge NSDictionary* )exif;
                 NSDictionary *tiff_dict = (__bridge NSDictionary *)tiff;
@@ -84,7 +84,9 @@
                 NSLog(@"Exception: %@", e);
             }
             
-            CFRelease(imagePropertiesDictionary);
+            if (imagePropertiesDictionary != nil) {
+                CFRelease(imagePropertiesDictionary);
+            }
             CFRelease(sourceRef);
         } else {
             NSLog(@"image_representation buffer length == 0");
