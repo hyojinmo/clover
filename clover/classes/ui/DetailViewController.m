@@ -22,8 +22,12 @@
         self.view.backgroundColor = [UIColor whiteColor];
         
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        _scrollView.delegate = self;
+        _scrollView.maximumZoomScale = 1.0f;
+        _scrollView.minimumZoomScale = 0.4f;
         _imageView = [[UIImageView alloc] init];
-        
+        _imageView.contentMode = UIViewContentModeScaleAspectFit;
+        _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         [_scrollView addSubview:_imageView];
         [self.view addSubview:_scrollView];
     }
@@ -34,27 +38,26 @@
 {
     
     UIImage *resizedImage;
-    
+    /*
     if(image.size.width > self.view.bounds.size.width) {
             
         float ratio = self.view.bounds.size.width/image.size.width;
-        NSLog(@"ratio = %f", ratio);
         int resizeWidth = self.view.bounds.size.width;
         int resizeHeight = image.size.height * ratio;
-        NSLog(@"width = %d height = %d", resizeWidth, resizeHeight);
         resizedImage = [self resizeImage:image newSize:CGSizeMake(resizeWidth/2, resizeHeight/2)];
     }
     else {
-        resizedImage = image;
-    }
-    
-    NSLog(@"width = %f height = %f", resizedImage.size.width, resizedImage.size.height);
+    */  
+     resizedImage = image;
+    //}
     
     [_imageView setImage:resizedImage];
+
     _imageView.frame = CGRectMake(0, 0, resizedImage.size.width, resizedImage.size.height);
     _imageView.center = CGPointMake(resizedImage.size.width/2, resizedImage.size.height/2);
     
     [_scrollView setContentSize:resizedImage.size];
+    [_scrollView setZoomScale:_scrollView.minimumZoomScale];
 }
 
 - (UIImage *)resizeImage:(UIImage*)image newSize:(CGSize)newSize {
@@ -99,6 +102,13 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+#pragma UIScrollView Delegate
+
+- (UIView *)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    return _imageView;
 }
 
 @end
