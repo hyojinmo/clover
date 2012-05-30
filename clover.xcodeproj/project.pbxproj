@@ -15,12 +15,10 @@
 		263115E11568D84C00CB70DE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E01568D84C00CB70DE /* main.m */; };
 		263115E51568D84C00CB70DE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 263115E41568D84C00CB70DE /* AppDelegate.m */; };
 		263115F21568D8C600CB70DE /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 263115F11568D8C600CB70DE /* AssetsLibrary.framework */; };
-		2654862B157514F800A470E5 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654862A157514F800A470E5 /* DetailViewController.m */; };
-		2654862E157518F900A470E5 /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2654862D157518F800A470E5 /* PhotoListViewController.m */; };
-		26548631157519E800A470E5 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 26548630157519E800A470E5 /* TimelineViewController.m */; };
 		26559F30156E764E00B451A9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26559F2F156E764E00B451A9 /* QuartzCore.framework */; };
 		A2F5A0371574DC2B0071D9E3 /* DTTestGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F5A02C1574DC2B0071D9E3 /* DTTestGridViewCell.m */; };
 		A2F5A0381574DC2B0071D9E3 /* DTTestGridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F5A02E1574DC2B0071D9E3 /* DTTestGridViewController.m */; };
+		A2F5A0391574DC2B0071D9E3 /* GridViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F5A0301574DC2B0071D9E3 /* GridViewController.m */; };
 		A2F5A03A1574DC2B0071D9E3 /* ImageGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F5A0321574DC2B0071D9E3 /* ImageGridViewCell.m */; };
 		A2F5A03B1574DC2B0071D9E3 /* RootTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F5A0341574DC2B0071D9E3 /* RootTabBarController.m */; };
 		A2F5A03C1574DC2B0071D9E3 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A2F5A0361574DC2B0071D9E3 /* StoryViewController.m */; };
@@ -57,17 +55,13 @@
 		263115E31568D84C00CB70DE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		263115E41568D84C00CB70DE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		263115F11568D8C600CB70DE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		26548629157514F800A470E5 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailViewController.h; path = classes/ui/DetailViewController.h; sourceTree = "<group>"; };
-		2654862A157514F800A470E5 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailViewController.m; path = classes/ui/DetailViewController.m; sourceTree = "<group>"; };
-		2654862C157518F800A470E5 /* PhotoListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhotoListViewController.h; path = classes/ui/PhotoListViewController.h; sourceTree = "<group>"; };
-		2654862D157518F800A470E5 /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhotoListViewController.m; path = classes/ui/PhotoListViewController.m; sourceTree = "<group>"; };
-		2654862F157519E800A470E5 /* TimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimelineViewController.h; path = classes/ui/TimelineViewController.h; sourceTree = "<group>"; };
-		26548630157519E800A470E5 /* TimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimelineViewController.m; path = classes/ui/TimelineViewController.m; sourceTree = "<group>"; };
 		26559F2F156E764E00B451A9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A2F5A02B1574DC2B0071D9E3 /* DTTestGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTestGridViewCell.h; path = classes/ui/DTTestGridViewCell.h; sourceTree = "<group>"; };
 		A2F5A02C1574DC2B0071D9E3 /* DTTestGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTestGridViewCell.m; path = classes/ui/DTTestGridViewCell.m; sourceTree = "<group>"; };
 		A2F5A02D1574DC2B0071D9E3 /* DTTestGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTTestGridViewController.h; path = classes/ui/DTTestGridViewController.h; sourceTree = "<group>"; };
 		A2F5A02E1574DC2B0071D9E3 /* DTTestGridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTTestGridViewController.m; path = classes/ui/DTTestGridViewController.m; sourceTree = "<group>"; };
+		A2F5A02F1574DC2B0071D9E3 /* GridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GridViewController.h; path = classes/ui/GridViewController.h; sourceTree = "<group>"; };
+		A2F5A0301574DC2B0071D9E3 /* GridViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GridViewController.m; path = classes/ui/GridViewController.m; sourceTree = "<group>"; };
 		A2F5A0311574DC2B0071D9E3 /* ImageGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageGridViewCell.h; path = classes/ui/ImageGridViewCell.h; sourceTree = "<group>"; };
 		A2F5A0321574DC2B0071D9E3 /* ImageGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImageGridViewCell.m; path = classes/ui/ImageGridViewCell.m; sourceTree = "<group>"; };
 		A2F5A0331574DC2B0071D9E3 /* RootTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootTabBarController.h; path = classes/ui/RootTabBarController.h; sourceTree = "<group>"; };
@@ -140,18 +134,14 @@
 				A2F5A02C1574DC2B0071D9E3 /* DTTestGridViewCell.m */,
 				A2F5A02D1574DC2B0071D9E3 /* DTTestGridViewController.h */,
 				A2F5A02E1574DC2B0071D9E3 /* DTTestGridViewController.m */,
+				A2F5A02F1574DC2B0071D9E3 /* GridViewController.h */,
+				A2F5A0301574DC2B0071D9E3 /* GridViewController.m */,
 				A2F5A0311574DC2B0071D9E3 /* ImageGridViewCell.h */,
 				A2F5A0321574DC2B0071D9E3 /* ImageGridViewCell.m */,
 				A2F5A0331574DC2B0071D9E3 /* RootTabBarController.h */,
 				A2F5A0341574DC2B0071D9E3 /* RootTabBarController.m */,
 				A2F5A0351574DC2B0071D9E3 /* StoryViewController.h */,
 				A2F5A0361574DC2B0071D9E3 /* StoryViewController.m */,
-				26548629157514F800A470E5 /* DetailViewController.h */,
-				2654862A157514F800A470E5 /* DetailViewController.m */,
-				2654862C157518F800A470E5 /* PhotoListViewController.h */,
-				2654862D157518F800A470E5 /* PhotoListViewController.m */,
-				2654862F157519E800A470E5 /* TimelineViewController.h */,
-				26548630157519E800A470E5 /* TimelineViewController.m */,
 			);
 			name = ui;
 			sourceTree = "<group>";
@@ -354,6 +344,7 @@
 				263115E51568D84C00CB70DE /* AppDelegate.m in Sources */,
 				A2F5A0371574DC2B0071D9E3 /* DTTestGridViewCell.m in Sources */,
 				A2F5A0381574DC2B0071D9E3 /* DTTestGridViewController.m in Sources */,
+				A2F5A0391574DC2B0071D9E3 /* GridViewController.m in Sources */,
 				A2F5A03A1574DC2B0071D9E3 /* ImageGridViewCell.m in Sources */,
 				A2F5A03B1574DC2B0071D9E3 /* RootTabBarController.m in Sources */,
 				A2F5A03C1574DC2B0071D9E3 /* StoryViewController.m in Sources */,
@@ -375,9 +366,6 @@
 				A2F5A0721574DC9D0071D9E3 /* DTSnapGridView.m in Sources */,
 				A2F5A0731574DC9D0071D9E3 /* DTSnapGridViewCell.m in Sources */,
 				A2F5A0761574DCAB0071D9E3 /* DTInfiniteGridView.m in Sources */,
-				2654862B157514F800A470E5 /* DetailViewController.m in Sources */,
-				2654862E157518F900A470E5 /* PhotoListViewController.m in Sources */,
-				26548631157519E800A470E5 /* TimelineViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
