@@ -35,7 +35,6 @@
     
     _rootTabBarController = [[RootTabBarController alloc] init];
     [self.window setRootViewController:_rootTabBarController];
-    
     [self.window makeKeyAndVisible];
     return YES;
 
