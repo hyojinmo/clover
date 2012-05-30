@@ -23,8 +23,8 @@
         
         _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
         _scrollView.delegate = self;
-        _scrollView.maximumZoomScale = 1.0f;
-        _scrollView.minimumZoomScale = 0.4f;
+        _scrollView.maximumZoomScale = 2.0f;
+        _scrollView.minimumZoomScale = 1.0f;
         _imageView = [[UIImageView alloc] init];
         _imageView.contentMode = UIViewContentModeScaleAspectFit;
         _imageView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -38,7 +38,7 @@
 {
     
     UIImage *resizedImage;
-    /*
+    
     if(image.size.width > self.view.bounds.size.width) {
             
         float ratio = self.view.bounds.size.width/image.size.width;
@@ -47,17 +47,18 @@
         resizedImage = [self resizeImage:image newSize:CGSizeMake(resizeWidth/2, resizeHeight/2)];
     }
     else {
-    */  
-     resizedImage = image;
-    //}
+      
+        resizedImage = image;
+        
+    }
     
     [_imageView setImage:resizedImage];
 
     _imageView.frame = CGRectMake(0, 0, resizedImage.size.width, resizedImage.size.height);
-    _imageView.center = CGPointMake(resizedImage.size.width/2, resizedImage.size.height/2);
+    _imageView.center = CGPointMake(resizedImage.size.width/2, self.view.bounds.size.height/2);
     
     [_scrollView setContentSize:resizedImage.size];
-    [_scrollView setZoomScale:_scrollView.minimumZoomScale];
+    //[_scrollView setZoomScale:_scrollView.minimumZoomScale];
 }
 
 - (UIImage *)resizeImage:(UIImage*)image newSize:(CGSize)newSize {
@@ -90,13 +91,21 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+   
 	// Do any additional setup after loading the view.
+    
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
     // Release any retained subviews of the main view.
+}
+
+- (void)dealloc 
+{
+    [super dealloc];
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
