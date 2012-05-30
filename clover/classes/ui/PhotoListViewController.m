@@ -18,6 +18,7 @@
 @synthesize assetsLibrary;
 @synthesize assetsList;
 @synthesize gridView;
+@synthesize detailViewController;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -25,7 +26,8 @@
     if (self) {
         
         [self setTitle:VIEW_TITLE];
-        [self setTabBarItem:[[UITabBarItem alloc] initWithTitle:VIEW_TITLE image:nil tag:0]];
+        self.detailViewController = [[DetailViewController alloc] init];
+        
         
         [self initAssetLib];
         [self initGridView];
@@ -48,6 +50,7 @@
      self.gridView.autoresizesSubviews = YES;
      self.gridView.delegate = self;
      self.gridView.dataSource = self;
+     self.gridView.backgroundColor = [UIColor whiteColor];
     
      [self.view addSubview:gridView];
      [self.gridView reloadData];
@@ -79,7 +82,6 @@
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 - (void)dealloc 
@@ -88,31 +90,6 @@
     [assetsLibrary release];
     [assetsList release];
     [super dealloc];
-}
-
-- (UIImage *)resizeImage:(UIImage*)image newSize:(CGSize)newSize {
-    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height));
-    CGImageRef imageRef = image.CGImage;
-    
-    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    // Set the quality level to use when rescaling
-    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
-    CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, newSize.height);
-    
-    CGContextConcatCTM(context, flipVertical);  
-    // Draw into the context; this scales the image
-    CGContextDrawImage(context, newRect, imageRef);
-    
-    // Get the resized image from the context and a UIImage
-    CGImageRef newImageRef = CGBitmapContextCreateImage(context);
-    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
-    
-    CGImageRelease(newImageRef);
-    UIGraphicsEndImageContext();    
-    
-    return newImage;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -162,13 +139,10 @@
     // 이미지를 클릭하면 발생
     ALAsset *asset = [self.assetsList objectAtIndex:index];
     UIImage *image = [[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullScreenImage];
-    Class class = NSClassFromString(@"DetailViewController");
     
-    DetailViewController* detailViewController = (DetailViewController *)[[class alloc] init];
-    [detailViewController.imageView setImage:image];
     [detailViewController setImage:image];
     [self.navigationController pushViewController:detailViewController animated:YES];
-    [detailViewController release];
+    
 }
 
 

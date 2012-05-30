@@ -10,11 +10,10 @@
 
 @interface DetailViewController : UIViewController {
     
-    UIImageView *imageView;
+    UIScrollView *_scrollView;
+    UIImageView *_imageView;
 }
 
 - (void) setImage : (UIImage *)image;
-
-@property (nonatomic, retain) UIImageView *imageView;
 
 @end

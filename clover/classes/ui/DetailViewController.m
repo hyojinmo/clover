@@ -13,25 +13,76 @@
 @end
 
 @implementation DetailViewController
-@synthesize imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.imageView = [[UIImageView alloc] init];
-        [self.view addSubview:self.imageView];
+        self.view.backgroundColor = [UIColor whiteColor];
+        
+        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        _imageView = [[UIImageView alloc] init];
+        
+        [_scrollView addSubview:_imageView];
+        [self.view addSubview:_scrollView];
     }
     return self;
 }
 
 - (void)setImage:(UIImage *)image
 {
-    [self.imageView setImage:image];
-    self.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
-    self.imageView.center = CGPointMake(self.view.bounds.size.width/2, image.size.height/2);
+    
+    UIImage *resizedImage;
+    
+    if(image.size.width > self.view.bounds.size.width) {
+            
+        float ratio = self.view.bounds.size.width/image.size.width;
+        NSLog(@"ratio = %f", ratio);
+        int resizeWidth = self.view.bounds.size.width;
+        int resizeHeight = image.size.height * ratio;
+        NSLog(@"width = %d height = %d", resizeWidth, resizeHeight);
+        resizedImage = [self resizeImage:image newSize:CGSizeMake(resizeWidth/2, resizeHeight/2)];
+    }
+    else {
+        resizedImage = image;
+    }
+    
+    NSLog(@"width = %f height = %f", resizedImage.size.width, resizedImage.size.height);
+    
+    [_imageView setImage:resizedImage];
+    _imageView.frame = CGRectMake(0, 0, resizedImage.size.width, resizedImage.size.height);
+    _imageView.center = CGPointMake(resizedImage.size.width/2, resizedImage.size.height/2);
+    
+    [_scrollView setContentSize:resizedImage.size];
 }
+
+- (UIImage *)resizeImage:(UIImage*)image newSize:(CGSize)newSize {
+    
+    CGRect newRect = CGRectIntegral(CGRectMake(0, 0, newSize.width, newSize.height));
+    CGImageRef imageRef = image.CGImage;
+    
+    UIGraphicsBeginImageContextWithOptions(newSize, NO, 0);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    // Set the quality level to use when rescaling
+    CGContextSetInterpolationQuality(context, kCGInterpolationHigh);
+    CGAffineTransform flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, newSize.height);
+    
+    CGContextConcatCTM(context, flipVertical);  
+    // Draw into the context; this scales the image
+    CGContextDrawImage(context, newRect, imageRef);
+    
+    // Get the resized image from the context and a UIImage
+    CGImageRef newImageRef = CGBitmapContextCreateImage(context);
+    UIImage *newImage = [UIImage imageWithCGImage:newImageRef];
+    
+    CGImageRelease(newImageRef);
+    UIGraphicsEndImageContext();    
+    
+    return newImage;
+}
+
 
 - (void)viewDidLoad
 {

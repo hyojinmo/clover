@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import "AQGridView.h"
+#import "DetailViewController.h"
 
 #define VIEW_TITLE @"Photo"
 
@@ -16,11 +17,14 @@
     
     ALAssetsLibrary *assetsLibrary;
     NSMutableArray *assetsList;
+    
     AQGridView *gridview;
+    DetailViewController *detailViewController;
 }
 
 @property (nonatomic, retain) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic, retain) NSMutableArray *assetsList;
 @property (nonatomic, retain) AQGridView *gridView;
+@property (nonatomic, retain) DetailViewController *detailViewController;
 
 @end
