@@ -8,7 +8,6 @@
 
 #import "PhotoListViewController.h"
 #import "ImageGridViewCell.h"
-#import "ImagePropertiesLib.h"
 
 @interface PhotoListViewController ()
 
@@ -18,8 +17,6 @@
 @synthesize assetsLibrary;
 @synthesize assetsList;
 @synthesize gridView;
-
-ImagePropertiesLib *_imagePropertiesLib;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -40,8 +37,6 @@ ImagePropertiesLib *_imagePropertiesLib;
     ALAssetsLibrary *newLibray = [[ALAssetsLibrary alloc] init];
     self.assetsLibrary = [newLibray retain];
     [newLibray release];
-    
-    _imagePropertiesLib = [[ImagePropertiesLib alloc] init];
 }
 
 - (void) initGridView
@@ -69,6 +64,7 @@ ImagePropertiesLib *_imagePropertiesLib;
                                               [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
                                                   
                                                   if (result!=nil) { 
+                                                      
                                                       [self.assetsList addObject:result];
                                                       [self.gridView reloadData];
                                                   } 
@@ -136,7 +132,6 @@ ImagePropertiesLib *_imagePropertiesLib;
     static NSString * PlainCellIdentifier = @"ImageCellIdentifier";
     
     ALAsset *asset = [self.assetsList objectAtIndex:index];
-    [_imagePropertiesLib getImagePropertiesWithAsset:asset];
     UIImage *image = [[UIImage alloc] initWithCGImage:asset.thumbnail];
     ImageGridViewCell * cell = (ImageGridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier"];
     if ( cell == nil )
