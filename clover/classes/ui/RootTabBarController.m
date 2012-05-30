@@ -9,15 +9,16 @@
 #import "RootTabBarController.h"
 
 #import "DTTestGridViewController.h"
-#import "GridViewController.h"
+#import "TimelineViewController.h"
 #import "StoryViewController.h"
+#import "PhotoListViewController.h"
 
 @interface RootTabBarController ()
 
 @end
 
 //DTTestGridViewController *_testViewController;
-GridViewController *_gridViewController;
+TimelineViewController *_timelineViewController;
 StoryViewController *_storyViewController;
 
 @implementation RootTabBarController
@@ -37,10 +38,14 @@ StoryViewController *_storyViewController;
 	// Do any additional setup after loading the view.
     
     //_testViewController = [[DTTestGridViewController alloc] init];
-    _gridViewController = [[GridViewController alloc] init];
+    
+    PhotoListViewController *photoListViewController = [[PhotoListViewController alloc] init];
+    _timelineViewController = [[TimelineViewController alloc] initWithRootViewController:photoListViewController];
+    [photoListViewController release];
+    
     _storyViewController = [[StoryViewController alloc] init];
     
-    NSArray *viewControllers = [[NSArray alloc] initWithObjects:_gridViewController, _storyViewController, nil];
+    NSArray *viewControllers = [[NSArray alloc] initWithObjects:_timelineViewController, _storyViewController, nil];
     
     [self setViewControllers:viewControllers];
 }
