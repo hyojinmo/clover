@@ -13,14 +13,24 @@
 @end
 
 @implementation DetailViewController
+@synthesize imageView;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        
+        self.imageView = [[UIImageView alloc] init];
+        [self.view addSubview:self.imageView];
     }
     return self;
+}
+
+- (void)setImage:(UIImage *)image
+{
+    [self.imageView setImage:image];
+    self.imageView.frame = CGRectMake(0, 0, image.size.width, image.size.height);
+    self.imageView.center = CGPointMake(self.view.bounds.size.width/2, image.size.height/2);
 }
 
 - (void)viewDidLoad

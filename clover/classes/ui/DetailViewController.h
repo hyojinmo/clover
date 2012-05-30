@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController {
+    
+    UIImageView *imageView;
+}
+
+- (void) setImage : (UIImage *)image;
+
+@property (nonatomic, retain) UIImageView *imageView;
 
 @end

@@ -8,6 +8,7 @@
 
 #import "PhotoListViewController.h"
 #import "ImageGridViewCell.h"
+#import "DetailViewController.h"
 
 @interface PhotoListViewController ()
 
@@ -159,13 +160,15 @@
 - (void)gridView:(AQGridView *)gridView didSelectItemAtIndex:(NSUInteger)index 
 {
     // 이미지를 클릭하면 발생
-    //ALAsset *asset = [self.assetsList objectAtIndex:index];
+    ALAsset *asset = [self.assetsList objectAtIndex:index];
+    UIImage *image = [[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullScreenImage];
     Class class = NSClassFromString(@"DetailViewController");
-    id detailViewController = [[[class alloc] init] autorelease];
     
-    if(detailViewController) {
-        [self.navigationController pushViewController:detailViewController animated:YES];
-    }
+    DetailViewController* detailViewController = (DetailViewController *)[[class alloc] init];
+    [detailViewController.imageView setImage:image];
+    [detailViewController setImage:image];
+    [self.navigationController pushViewController:detailViewController animated:YES];
+    [detailViewController release];
 }
 
 
