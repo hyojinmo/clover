@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AssetsLibrary/ALAssetsLibrary.h>
+#import <AssetsLibrary/ALAsset.h>
+#import <AssetsLibrary/ALAssetRepresentation.h>
+#import <ImageIO/CGImageSource.h>
+#import <ImageIO/CGImageProperties.h>
 
 @interface ImagePropertiesLib : NSObject
 
-- (void) getImagePropertiesDictionaryWithUrl:(NSURL *)url;
++ (void) getImagePropertiesUsingBlockWithUrl:(NSURL *)url;
++ (void) getImagePropertiesUsingBlockWithAsset:(ALAsset *)asset;
 
 @end
