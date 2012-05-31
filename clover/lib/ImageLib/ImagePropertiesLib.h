@@ -12,10 +12,13 @@
 #import <AssetsLibrary/ALAssetRepresentation.h>
 #import <ImageIO/CGImageSource.h>
 #import <ImageIO/CGImageProperties.h>
+#import <ImageIO/CGImageDestination.h>
 
 @interface ImagePropertiesLib : NSObject
 
 + (void) getImagePropertiesUsingBlockWithUrl:(NSURL *)url;
 + (void) getImagePropertiesUsingBlockWithAsset:(ALAsset *)asset;
++ (void) getImagePropertiesWithAsset:(ALAsset *)asset;
++ (void) saveImagePropertiesWithAsset:(ALAsset *)asset;
 
 @end
