@@ -7,6 +7,7 @@
 //
 
 #import "TimelineViewController.h"
+#import "PhotoListViewController.h"
 
 @interface TimelineViewController ()
 
@@ -14,12 +15,15 @@
 
 @implementation TimelineViewController
 
+PhotoListViewController *_photoListViewController;
+
 - (id)init
 {
     self = [super init];
     if(self) {
+        _photoListViewController = [[PhotoListViewController alloc] init];
         
-        
+        [self pushViewController:_photoListViewController animated:NO];
     }
     
     return self;

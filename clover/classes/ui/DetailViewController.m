@@ -21,7 +21,7 @@
         
         self.view.backgroundColor = [UIColor whiteColor];
         
-        _scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+        _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
         _scrollView.delegate = self;
         _scrollView.maximumZoomScale = 2.0f;
         _scrollView.minimumZoomScale = 1.0f;

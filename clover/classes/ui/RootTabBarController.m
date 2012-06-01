@@ -39,9 +39,9 @@ StoryViewController *_storyViewController;
     
     //_testViewController = [[DTTestGridViewController alloc] init];
     
-    PhotoListViewController *photoListViewController = [[PhotoListViewController alloc] init];
-    _timelineViewController = [[TimelineViewController alloc] initWithRootViewController:photoListViewController];
-    [photoListViewController release];
+//    PhotoListViewController *photoListViewController = [[PhotoListViewController alloc] init];
+    _timelineViewController = [[TimelineViewController alloc] init];
+//    [photoListViewController release];
     
     _storyViewController = [[StoryViewController alloc] init];
     

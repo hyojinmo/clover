@@ -24,66 +24,22 @@
     [assetsLibrary assetForURL:url resultBlock:resultBlock failureBlock:failureBlock];
 }
 
-+ (void) getImagePropertiesUsingBlockWithAsset:(ALAsset *)asset {
-    dispatch_queue_t propQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_async(propQueue, ^{
-        [self getImagePropertiesWithAsset:asset];
++ (void) getImagePropertiesUsingBlockWithAsset:(ALAsset *)asset index:(NSUInteger)index {
+    dispatch_queue_t dispatchQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0);
+    dispatch_async(dispatchQueue, ^{
+        NSLog(@"%d", index);
+        @try {
+            [self getImagePropertiesWithAsset:asset];
+        }
+        @catch (NSException *e) {
+            NSLog(@"%@", e);
+        }
     });
 }
 
 + (void) getImagePropertiesWithAsset:(ALAsset *)asset {
-    double timestamp = [[NSDate date] timeIntervalSince1970];
-    
     ALAssetRepresentation *image_representation = [asset defaultRepresentation];
-    
-    // create a buffer to hold image data 
-    uint8_t *buffer = (Byte*)malloc(image_representation.size);
-    NSUInteger length = [image_representation getBytes:buffer fromOffset: 0.0  length:image_representation.size error:nil];
-    
-    if (length != 0)  {
-        // buffer -> NSData object; free buffer afterwards
-        NSData *adata = [[NSData alloc] initWithBytesNoCopy:buffer length:image_representation.size freeWhenDone:YES];
-        
-        // identify image type (jpeg, png, RAW file, ...) using UTI hint
-        NSDictionary* sourceOptionsDict = [NSDictionary dictionaryWithObjectsAndKeys:(id)[image_representation UTI] ,kCGImageSourceTypeIdentifierHint,nil];
-        
-        // create CGImageSource with NSData
-        CGImageSourceRef sourceRef = CGImageSourceCreateWithData((__bridge CFDataRef) adata,  (__bridge CFDictionaryRef) sourceOptionsDict);
-        
-        // get imagePropertiesDictionary
-        CFDictionaryRef imagePropertiesDictionary;
-        imagePropertiesDictionary = CGImageSourceCopyPropertiesAtIndex(sourceRef, 0, NULL);
-        
-        if (imagePropertiesDictionary) {
-            // get exif data
-            CFDictionaryRef exif = (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyExifDictionary);
-            CFDictionaryRef tiff = (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyTIFFDictionary);
-            CFDictionaryRef gps = (CFDictionaryRef)CFDictionaryGetValue(imagePropertiesDictionary, kCGImagePropertyGPSDictionary);
-            
-            if (exif) {
-                NSDictionary *exif_dict = (__bridge NSDictionary* )exif;
-                NSLog(@"exif_dict: %@", exif_dict);
-            }
-            
-            if (tiff) {
-                NSDictionary *tiff_dict = (__bridge NSDictionary *)tiff;
-                NSLog(@"tiff_dict: %@", tiff_dict);
-            }
-            
-            if (gps) {
-                NSDictionary *gps_dict = (__bridge NSDictionary *)gps;
-                NSLog(@"gps_dict: %@", gps_dict);
-            }
-            
-            NSLog(@"processing time: %f", [[NSDate date] timeIntervalSince1970] - timestamp);
-            
-            CFRelease(imagePropertiesDictionary);
-        }
-        
-        CFRelease(sourceRef);
-    } else {
-        NSLog(@"image_representation buffer length == 0");
-    }
+    NSLog(@"%@", [image_representation metadata]);
 }
 
 + (void) saveImagePropertiesWithAsset:(ALAsset *)asset {

@@ -17,7 +17,7 @@
 @interface ImagePropertiesLib : NSObject
 
 + (void) getImagePropertiesUsingBlockWithUrl:(NSURL *)url;
-+ (void) getImagePropertiesUsingBlockWithAsset:(ALAsset *)asset;
++ (void) getImagePropertiesUsingBlockWithAsset:(ALAsset *)asset index:(NSUInteger)index;
 + (void) getImagePropertiesWithAsset:(ALAsset *)asset;
 + (void) saveImagePropertiesWithAsset:(ALAsset *)asset;
 

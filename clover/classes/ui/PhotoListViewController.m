@@ -27,8 +27,8 @@
     if (self) {
         
         [self setTitle:VIEW_TITLE];
-        self.detailViewController = [[DetailViewController alloc] init];
         
+        self.detailViewController = [[DetailViewController alloc] init];
         
         [self initAssetLib];
         [self initGridView];
@@ -45,39 +45,39 @@
 
 - (void) initGridView
 {
-     self.assetsList = [[NSMutableArray alloc] initWithCapacity:0];
-     self.gridView = [[AQGridView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
-     self.gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
-     self.gridView.autoresizesSubviews = YES;
-     self.gridView.delegate = self;
-     self.gridView.dataSource = self;
-     self.gridView.backgroundColor = [UIColor whiteColor];
+    self.assetsList = [[NSMutableArray alloc] initWithCapacity:0];
     
-     [self.view addSubview:gridView];
-     [self.gridView reloadData];
+    self.gridView = [[AQGridView alloc] initWithFrame:self.view.bounds];
+    self.gridView.autoresizingMask = UIViewAutoresizingFlexibleWidth|UIViewAutoresizingFlexibleHeight;
+    self.gridView.autoresizesSubviews = YES;
+    self.gridView.delegate = self;
+    self.gridView.dataSource = self;
+    self.gridView.backgroundColor = [UIColor whiteColor];
+    
+    [self.view addSubview:gridView];
+    [self.gridView reloadData];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll
-     
                                       usingBlock:^(ALAssetsGroup *group, BOOL *stop) {
-                                          
-                                          if (group != nil) { 
-                                              
-                                              [group enumerateAssetsUsingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
-                                                  
-                                                  if (result!=nil) { 
-                                                      
+                                          if (group != nil) {
+                                              [group setAssetsFilter:[ALAssetsFilter allPhotos]];
+                                              [group enumerateAssetsWithOptions:NSEnumerationReverse usingBlock:^(ALAsset *result, NSUInteger index, BOOL *stop) {
+                                                  if (result!=nil) {
                                                       [self.assetsList addObject:result];
                                                       [self.gridView reloadData];
-                                                  } 
-                                              }]; 
+                                                      
+//                                                      [ImagePropertiesLib getImagePropertiesUsingBlockWithAsset:result index:index];
+                                                  }
+                                              }];
                                           }
-                                          
                                       }
-                                    failureBlock:^(NSError *error) { NSLog(@"failure: %@", [error description]) ; }]; 
+                                    failureBlock:^(NSError *error) {
+                                        NSLog(@"failure: %@", [error description]);
+                                    }];
 }
 
 - (void)viewDidUnload
@@ -111,7 +111,6 @@
     static NSString * PlainCellIdentifier = @"ImageCellIdentifier";
     
     ALAsset *asset = [self.assetsList objectAtIndex:index];
-    [ImagePropertiesLib getImagePropertiesUsingBlockWithAsset:asset];
     UIImage *image = [[UIImage alloc] initWithCGImage:asset.thumbnail];
     ImageGridViewCell * cell = (ImageGridViewCell *)[aGridView dequeueReusableCellWithIdentifier:@"ImageCellIdentifier"];
     if ( cell == nil )
@@ -140,7 +139,7 @@
 {
     // 이미지를 클릭하면 발생
     ALAsset *asset = [self.assetsList objectAtIndex:index];
-    UIImage *image = [[UIImage alloc] initWithCGImage:asset.defaultRepresentation.fullScreenImage];
+    UIImage *image = [[UIImage alloc] initWithCGImage:[asset defaultRepresentation].fullScreenImage];
     
     [detailViewController setImage:image];
     [self.navigationController pushViewController:detailViewController animated:YES];
